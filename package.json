@@ -1,0 +1,31 @@
+{
+  "name": "eduzenith",
+  "version": "1.0.0",
+  "description": "Enterprise MERN Learning Management System & Course Hub",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "node server/tests/e2e.test.js && node server/tests/courseCrud.test.js && node server/tests/syllabus.test.js && node server/tests/enrollment.test.js && node server/tests/security.test.js",
+    "seed": "node server/utils/seedFixtures.js"
+  },
+  "keywords": [
+    "lms",
+    "mern",
+    "education",
+    "course-hub",
+    "react",
+    "mongodb",
+    "express"
+  ],
+  "author": "Parvatiofficial <Parvati@trydigitalsolution.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
