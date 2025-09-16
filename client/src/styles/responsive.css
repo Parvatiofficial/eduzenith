@@ -1,0 +1,34 @@
+/* Responsive media queries for EduZenith LMS */
+@media (max-width: 992px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .nav-actions {
+    width: 100%;
+  }
+  .nav-actions .btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-input-group {
+    min-width: 100%;
+  }
+  .filter-controls {
+    flex-direction: column;
+  }
+  .enterprise-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
