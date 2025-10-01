@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eduzenith-api
+    restart: unless-stopped
+    ports:
+      - "5005:5005"
+    environment:
+      - PORT=5005
+      - MONGO_URI=mongodb://mongo:27017/eduzenith
+      - NODE_ENV=production
+      - CERT_SECRET=eduzenith-prod-secret-key-2025
+    depends_on:
+      - mongo
+    networks:
+      - eduzenith-network
+
+  mongo:
+    image: mongo:6.0-focal
+    container_name: eduzenith-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - eduzenith-data:/data/db
+    networks:
+      - eduzenith-network
+
+networks:
+  eduzenith-network:
+    driver: bridge
+
+volumes:
+  eduzenith-data:
