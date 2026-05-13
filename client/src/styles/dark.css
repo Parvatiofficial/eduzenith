@@ -1,0 +1,24 @@
+/* Dark mode theme tokens for EduZenith v2.0 */
+[data-theme='dark'] {
+  --bg-main: #0b1329;
+  --bg-card: #152238;
+  --text-dark: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #263859;
+}
+
+[data-theme='dark'] .navbar {
+  background: #152238;
+}
+
+[data-theme='dark'] .search-input-group,
+[data-theme='dark'] .select-input,
+[data-theme='dark'] .modal-content {
+  background: #152238;
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .search-input {
+  color: #f8fafc;
+  background: transparent;
+}
